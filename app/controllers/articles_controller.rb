@@ -2,6 +2,10 @@ class ArticlesController < ApplicationController
   
   #A frequent practice is to place the standard CRUD actions in each controller in the following order: index, show, new, edit, create, update and destroy. You may use any order you choose but these are public methods, they must be placed before declaring private visibility in the controller.
 
+def index
+  @articles = Article.all
+end
+
 def show
   @article = Article.find(params[:id])
   # @article is an instance variable that holds a reference to the article object. We do this because Rails will pass all instance variables to the view.
