@@ -1,12 +1,12 @@
 <h1>Article Listing</h1>
  
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'Post a New Article', new_article_path %>
 
 <table>
   <tr>
     <th>Title</th>
-    <th>Text</th>
-    <th></th>
+    <th>Description</th>
+    <th>Actions</th>
   </tr>
  
   <% @articles.each do |article| %>
