@@ -19,10 +19,6 @@ def edit
   @article = Article.find(params[:id])
 end
 
-def edit
-  @article =  Article.find(params[:id])
-end
-
 def create
   @article = Article.new(article_params)
     #The capital "A" about referrs to the class named Article that is defined in app/models/article.rb. Class names in Ruby must begin with a capital letter.
@@ -47,6 +43,13 @@ def update
   else
     render 'edit'
   end
+end
+
+def destroy
+  @article = Article.find(params[:id])
+  @article.destroy
+
+  redirect_to articles_path
 end
 
 private
