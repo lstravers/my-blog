@@ -17,6 +17,7 @@
  body {
    background-image: url(background.jpg);
    background-image: no-repeat;
+   color: #313131;
  }
 
  .field_with_errors {
