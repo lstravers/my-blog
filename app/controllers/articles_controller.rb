@@ -19,6 +19,10 @@ def edit
   @article = Article.find(params[:id])
 end
 
+def edit
+  @article =  Article.find(params[:id])
+end
+
 def create
   @article = Article.new(article_params)
     #The capital "A" about referrs to the class named Article that is defined in app/models/article.rb. Class names in Ruby must begin with a capital letter.
@@ -34,6 +38,16 @@ end
 #use render instead of redirect_to when save returns false. The render method is used so that the @article object is passed back to the new template when it is rendered. This rendering is done within the same request as the form submission, whereas the redirect_to will tell the browser to issue another request.
 
 #strong parameters: whitelist  controller parameters to prevent wrongful mass assignment. In this case, we want to both allow and require the title and text parameters for valid use of create
+
+def update
+  @article = Article.find(params[:id])
+
+  if @article.update(article_params)
+    redirect_to @article
+  else
+    render 'edit'
+  end
+end
 
 private
   def article_params

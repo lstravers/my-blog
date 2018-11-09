@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-image: url(background.jpg);
+   background-image: no-repeat;
+ }
+
+ .field_with_errors {
+   color: red;
+ }
+
+ .button{
+  background-color: #878787;
+  color: #F4F4F4;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  text-decoration: none;
+  /*add any other properties you want to style*/
+}
