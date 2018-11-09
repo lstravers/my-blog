@@ -24,6 +24,10 @@
    text-align: center;
  }
 
+ #comment-title {
+   color: red;
+ }
+
  .field_with_errors {
    color: red;
  }
