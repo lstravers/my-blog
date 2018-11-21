@@ -4,9 +4,15 @@
 </p>
  
 <p>
-  <strong>Text:</strong>
+  <strong>Decription:</strong>
   <%= @article.text %>
 </p>
+
+<h2 class="header">Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a Comment:</h2>
+<%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_article_path, :class => 'button' %><br><br>
 <%= link_to 'Back', articles_path, :class => 'button' %>

@@ -17,6 +17,15 @@
  body {
    background-image: url(background.jpg);
    background-image: no-repeat;
+   color: #313131;
+ }
+
+ .header {
+   text-align: center;
+ }
+
+ #comment-title {
+   color: red;
  }
 
  .field_with_errors {
@@ -24,7 +33,7 @@
  }
 
  .button{
-  background-color: #878787;
+  background-color: black;
   color: #F4F4F4;
   width: 200px;
   height: 100px;

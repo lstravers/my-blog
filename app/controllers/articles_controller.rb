@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+    http_basic_authenticate_with name: "irol",
+  password: "program", except: [:index, :show]
   
   #A frequent practice is to place the standard CRUD actions in each controller in the following order: index, show, new, edit, create, update and destroy. You may use any order you choose but these are public methods, they must be placed before declaring private visibility in the controller.
 
@@ -54,7 +57,7 @@ end
 
 private
   def article_params
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :text)
   end
 
 end
