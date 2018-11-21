@@ -6,3 +6,9 @@
 [posted by:
 <%= comment.commenter %>]
 </p>
+
+<p>
+ <%= link_to 'Delete Comment', [comment.article, comment],
+     method: :delete,
+     data: {confirm: 'Are you sure you want to permanently delete this comment?'} %>
+</p>
